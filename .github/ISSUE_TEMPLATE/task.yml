@@ -1,0 +1,68 @@
+name: "Modelo de Tarefa Padrão - TechToZero-BrightCity"
+description: "Modelo padrão de tarefas para o Kanban da TechToZero-BrightCity."
+# title: "Titulo da Tarefa"
+labels: []
+assignees: []
+projects: []
+body:
+  - type: input
+    id: rf
+    attributes:
+      label: Código do Requisito Funcional (se existir)
+      description: >
+        Código de referência para o requisito funcional do sistema
+      placeholder: |
+        RF1.1.1
+    validations:
+      required: false
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto e Proposta de Solução
+      description: >
+        Explique o problema, oportunidade ou objetivo de negócio.
+        Descreva, em alto nível, o valor gerado e a abordagem sugerida.
+      placeholder: |
+        O usuário precisa que apareça os detalhes de cor do veículo no aplicativo.
+        Portanto para que isso seja possível é necessário incluir no banco de dados um campo para armazenar a cor e disponibilizar as interações nos endpoints com este campo novo.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de Aceite (Given / When / Then)
+      description: >
+        Liste o que é necessário para que a tarefa seja dada como concluída.
+      placeholder: |
+        - [ ] Campo criado no model de vehicles;
+        - [ ] Foi incluído o novo campo de cor nos schemas de criação, listagem e edição do veículo;
+        - [ ] Os testes foram atualizados com as novas alterações
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Notas de Implementação (opcional)
+      description: >
+        Abordagem técnica, links de referência, diagramas, restrições ou decisões arquiteturais.
+      placeholder: |
+        - Reutilizar `VehicleBase`
+        - Adicionar testes de integração (pytest + Docker Compose)
+        - Diagrama sequence em https://excalidraw.com/#json…
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependências / Bloqueadores (opcional)
+      description: >
+        Liste PRs, issues ou fatores externos necessários antes de iniciar.
+      placeholder: |
+        - Merge do PR #42 (migration de banco)
+        - Liberação das credenciais do provedor X
+    validations:
+      required: false
