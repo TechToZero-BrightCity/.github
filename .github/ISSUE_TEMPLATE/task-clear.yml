@@ -1,0 +1,27 @@
+name: "Template Limpo - TechToZero-BrightCity"
+description: "Modelo padrão de tarefas para o Kanban da TechToZero-BrightCity."
+# title: "Titulo da Tarefa"
+labels: []
+assignees: []
+projects: []
+body:
+  - type: input
+    id: rf
+    attributes:
+      label: Código do Requisito Funcional (se existir)
+      description: >
+        Código de referência para o requisito funcional do sistema
+      placeholder: |
+        RF1.1.1
+    validations:
+      required: false
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Descrição Completa da Tarefa
+      description: >
+        Descreva completamente a tarefa com "Objectivo", "Estado actual verificado", "Decisões fixadas", "Âmbito", "Fora do âmbito", "Contratos a implementar", "Testes exigidos", "Armadilhas conhecidas", "Depende de", "Critério de conclusão", "Referências".
+      placeholder: 
+      validations:
+      required: true
