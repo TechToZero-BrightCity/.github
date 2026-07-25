@@ -22,6 +22,5 @@ body:
       label: Descrição Completa da Tarefa
       description: >
         Descreva completamente a tarefa com "Objectivo", "Estado actual verificado", "Decisões fixadas", "Âmbito", "Fora do âmbito", "Contratos a implementar", "Testes exigidos", "Armadilhas conhecidas", "Depende de", "Critério de conclusão", "Referências".
-      placeholder: 
-      validations:
-      required: true
+    validations:
+      required: false
